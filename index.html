@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16a34a">
+  <title>Snake PWA</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <header>
+        <h1>🐍 Snake</h1>
+        <p>Friss die Äpfel, wachse und schlage deinen Highscore.</p>
+      </header>
+
+      <div class="stats">
+        <div><span>Punkte</span><strong id="score">0</strong></div>
+        <div><span>Highscore</span><strong id="highscore">0</strong></div>
+      </div>
+
+      <canvas id="game" width="400" height="400" aria-label="Snake Spielfeld"></canvas>
+
+      <div id="message" class="message">Drücke Start oder eine Pfeiltaste.</div>
+
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="restartBtn">Neu starten</button>
+      </div>
+
+      <div class="mobile-controls" aria-label="Mobile Steuerung">
+        <button data-dir="up">▲</button>
+        <div>
+          <button data-dir="left">◀</button>
+          <button data-dir="down">▼</button>
+          <button data-dir="right">▶</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
